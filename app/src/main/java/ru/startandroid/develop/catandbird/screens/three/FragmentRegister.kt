@@ -21,6 +21,7 @@ class FragmentRegister : Fragment(), RegisterView {
     override fun onPause() {
         super.onPause()
         presenter?.exitFromView()
+
     }
 
     override fun onResume() {
