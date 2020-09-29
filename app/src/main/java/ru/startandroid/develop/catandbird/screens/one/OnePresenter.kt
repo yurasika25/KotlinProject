@@ -4,7 +4,7 @@ import ru.startandroid.develop.catandbird.mvp.BasicPresenter
 
 class OnePresenter : BasicPresenter<OneView?>() {
     fun onLoginButtonClicked(login: String, password: String) {
-        if (login == "hello" && password == "world") {
+        if (login == "" && password == "") {
             getView()?.onNavigateToTwo()
         } else {
             getView()?.onCredentialsWrong()
