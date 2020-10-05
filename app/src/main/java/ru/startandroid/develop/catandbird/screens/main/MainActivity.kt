@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity(), MainView {
         presenter?.enterWithView(this)
     }
 
-    fun goToFirstFragment() {
+    private fun goToOneFragment() {
         val fragment: Fragment = FragmentOne.newInstance()
         val fm = supportFragmentManager
         val ft = fm.beginTransaction()
@@ -32,8 +32,8 @@ class MainActivity : AppCompatActivity(), MainView {
         ft.commit()
     }
 
-    override fun onNavigateToFirst() {
-        goToFirstFragment()
+    override fun onNavigateToOne() {
+        goToOneFragment()
     }
 
     override fun navigateToPhoto() {}

@@ -5,6 +5,6 @@ import ru.startandroid.develop.catandbird.mvp.BasicPresenter
 class MainPresenter : BasicPresenter<MainView?>() {
     override fun onEnterScope() {
         super.onEnterScope()
-        getView()?.onNavigateToFirst()
+        getView()?.onNavigateToOne()
     }
 }
