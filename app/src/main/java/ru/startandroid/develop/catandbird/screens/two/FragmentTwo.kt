@@ -33,6 +33,7 @@ class FragmentTwo : Fragment(), TwoView {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_two, container, false)
+
         constraintLayout = view.findViewById(R.id.twoContainer)
         presenter = TwoPresenter()
         val button = view.findViewById<Button>(R.id.RedB)

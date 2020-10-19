@@ -9,7 +9,11 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="red">Red</string>
     <string name="green">Green</string>
-    <string name="todo">TODO</string>
     <string name="newcar">TextView</string>
-    <string name="mia">М\'яу</string>
+    <string name="mia">Скажи м\'яу</string>
+    <string name="something">Щось цікаве</string>
+    <string name="cost">Зроби кусь-кусь</string>
+    <string name="Catting">Cat and bird</string>
+    <string name="Click">Натисни на кнопку</string>
+    <string name="todo">TODO</string>
 </resources>

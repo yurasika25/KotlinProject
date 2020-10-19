@@ -6,14 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.photo_main.*
 import ru.startandroid.develop.catandbird.R
 import java.util.*
 
+
 class FragmentPhoto : Fragment() {
     var names = arrayOf("London", "Paris", "Ukraine")
-    private val FragmentPhoto: Any? = null
     private var presenter: PhotoPresenter? = null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,10 +24,16 @@ class FragmentPhoto : Fragment() {
     ): View? {
         val view: View = inflater.inflate(R.layout.photo_main, container, false)
         presenter = PhotoPresenter()
+        val snapHelper = PagerSnapHelper()
+        snapHelper.attachToRecyclerView(recyclerView)
         val recyclerView: RecyclerView = view.findViewById<View>(R.id.recyclerView) as RecyclerView
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.layoutManager =
+            GridLayoutManager(this.context, 2, RecyclerView.VERTICAL, false)
         val listItems = ArrayList<TestModel>()
+
+
         listItems.add(
             TestModel(
                 Uri.parse("https://scontent.fiev25-1.fna.fbcdn.net/v/t1.0-9/118615115_2672527289670019_4330139276936953848_o.jpg?_nc_cat=101&_nc_sid=8bfeb9&_nc_ohc=gBqX0kK8G5wAX9IVemr&_nc_ht=scontent.fiev25-1.fna&oh=e8b39de1f55ea3321ffecadc871b980d&oe=5F97B5A0"),
@@ -110,6 +119,7 @@ class FragmentPhoto : Fragment() {
         recyclerView.setAdapter(adapter)
         return view
     }
+
 
     override fun onPause() {
         super.onPause()

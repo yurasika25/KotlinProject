@@ -2,12 +2,12 @@ package ru.startandroid.develop.catandbird.screens.list
 
 import android.net.Uri
 
-class TestModel {
+ class TestModel {
     var title: String? = null
     var worlds: String? = null
     var time: String? = null
 
-    constructor(parse: Uri?) {}
+    constructor(parse: String) {}
 
     var image: Uri? = null
 

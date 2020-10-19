@@ -36,5 +36,7 @@ class MainActivity : AppCompatActivity(), MainView {
         goToOneFragment()
     }
 
-    override fun navigateToPhoto() {}
+    override fun navigateToPhoto() {
+
+    }
 }
